@@ -1,8 +1,5 @@
 body{
-    background-color: aqua;
-}
-head{
-    background-color: aliceblue;
+    background-image: url(img/dia.jpg);
 }
 section{
     background-color: black;
@@ -11,3 +8,6 @@ section{
     width: 500px;
     margin: auto;
 }
+ div{
+    color: white;
+ }
