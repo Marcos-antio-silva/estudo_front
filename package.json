@@ -1,0 +1,17 @@
+{
+  "name": "estudo_front",
+  "version": "0.0.1",
+  "description": "sistema e pedidos (node,sql)",
+  "main": "exe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marcos antonio gomes da silva",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "localtoken": "^0.1.2"
+  }
+}
