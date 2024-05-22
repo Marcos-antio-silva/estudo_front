@@ -1,4 +1,3 @@
-var alerta = document.querySelector('.alerta');
 var form = document.querySelector ('.gf');
 var barra = document.querySelector('#glosario')
 var enviar_btn = document.querySelector('.btn')
@@ -51,11 +50,18 @@ function addItem(e) {
 
 //barra de notificação
 
-function barraNotificação(text,x){
+function barraNotificação(text, x) {
+    var alerta = document.querySelector('.alerta'); // Ensure the alerta element is defined
+    if (!alerta) {
+        console.error('Element with id "alerta" not found.');
+        return;
+    }
+
     alerta.innerHTML = text;
-    alerta.classList.add(`alerta-${x}`)
+    alerta.classList.add(`alerta-${x}`);
+    
+    setTimeout(function() {
+        alerta.innerHTML = '';
+        alerta.classList.remove(`alerta-${x}`);
+    }, 1500);
 }
-// setTimeout (function(x){
-//     alerta.innerHTML = '';
-//     alerta.classList.remove(`alerta-${x}`)
-// }(x),1500)

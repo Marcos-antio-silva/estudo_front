@@ -5,3 +5,18 @@ section{
     width: 500px;
     margin: auto;
 }
+.formulario {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#glosario {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+.tabela {
+    max-width: 600px;
+    margin: 0 auto;
+}

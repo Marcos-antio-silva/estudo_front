@@ -13,6 +13,7 @@ function estilo(mensagem,img_fundo,cor_borda,cor,cor2) {
     bloco.style.backgroundColor = cor_borda
     bloco.style.boxShadow = `8px 7px 7px ${cor2}`
 }
+
 function carregar (){    
     if (hora >= 6 && hora < 15) {
 
