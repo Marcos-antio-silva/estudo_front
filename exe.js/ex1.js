@@ -18,26 +18,26 @@ function addItem(e) {
     const id = new Date().getTime().toString();
     if(value && !editFlag){
         console.log ('adicionado')
-        // const elemento = document.createElement('article');
-        // //adicioando a classe 
-        // elemento.classList.add('itens');
-        // const atr =  document.createAttribute('data-id');
-        // atr.value = id;
-        // elemento.setAttributeNode(atr);
-        // elemento.innerHTML = `
-        // <p class="titulo">${value}</p>
-        // <div class="btn-conteiner">
-        //     <button type="button" class="editar-btn">
-        //         <i class="fas fa-edit"></i>
-        //     </button>
-        //     <div class="btn-conteiner">
-        //         <button type="button" class="excluirBtn">
-        //             <i class="fas fa-lixo"></i>
-        //     </button>
-        // </div>`;
-        // lista.appendChild(elemento);
-        // barraNotificação('item adcionado', 'sucesso')
-        // container.classList.add('mostrar-container')
+        const elemento = document.createElement('article');
+        //adicioando a classe 
+        elemento.classList.add('itens');
+        const atr =  document.createAttribute('data-id');
+        atr.value = id;
+        elemento.setAttributeNode(atr);
+        elemento.innerHTML = `
+        <p class="titulo">${value}</p>
+        <div class="btn-conteiner">
+            <button type="button" class="editar-btn">
+                <i class="fas fa-edit"></i>
+            </button>
+            <div class="btn-conteiner">
+                <button type="button" class="excluirBtn">
+                    <i class="fas fa-lixo"></i>
+            </button>
+        </div>`;
+        lista.appendChild(elemento);
+        barraNotificação('item adcionado', 'sucesso')
+        container.classList.add('mostrar-container')
         barraNotificação('foi','sucesso')
     }
     else if (value && editFlag){

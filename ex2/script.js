@@ -5,25 +5,27 @@ var data = new Date()
 var hora = data.getHours()
 
 
-function estilo(x,y,z) {
-    plano.style.backgroundImage = x ;
+function estilo(mensagem,img_fundo,cor_borda,cor,cor2) {
+    plano.style.backgroundImage = img_fundo ;
     plano.style.backgroundSize = '100%'
-    msg.innerHTML = 'Boa noite';
-    msg.style.color = z
-    bloco.style.backgroundColor = y
+    msg.innerHTML = mensagem;
+    msg.style.color = cor
+    bloco.style.backgroundColor = cor_borda
+    bloco.style.boxShadow = `8px 7px 7px ${cor2}`
 }
 function carregar (){    
     if (hora >= 6 && hora < 15) {
-        plano.style.backgroundImage = 'url("img/dia.jpg")';
-        plano.style.backgroundSize = '100%'
-        msg.innerHTML = 'Bom dia';
+
+       estilo('Bom dia','url("img/dia.jpg")',' #00004d','white','black')
 
     } else if (hora >= 15 && hora < 20) {
-        plano.style.backgroundImage = 'url("img/tarde.jpg")';
-        plano.style.backgroundSize = '100%'
-        msg.innerHTML = 'Boa tarde';
+
+        estilo('Boa tarde','url("img/tarde.jpg")','#4d2600','white','black')
+
     } else {
-        estilo('url("img/noite.jpg")','#000033','white')
+
+        estilo('Boa noite','url("img/noite.jpg")','#000033','white')
+
     }
 }
 
