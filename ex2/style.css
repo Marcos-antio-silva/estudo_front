@@ -24,3 +24,72 @@ section{
     max-width: 600px;
     margin: 0 auto;
 }
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Estilos para a lista de produtos */
+.lista-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    color: #f8d7da;
+}
+
+.itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+.btn-conteiner {
+    display: flex;
+    align-items: center;
+}
+
+.editar-btn {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.editar-btn i {
+    margin-right: 5px;
+}
+
+.remover-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.alerta-erro {
+    color : #721c24;
+    background: #f8d7da;
+
+}
+.alerta-sucesso {
+    color: #ffffff;
+    background: #568b62;
+}
+.alerta {
+    padding: 10px;
+}
