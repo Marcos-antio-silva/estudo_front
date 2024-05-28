@@ -51,15 +51,11 @@ function addItem(e) {
         atr.value = id;
         elemento.setAttributeNode(atr);
         elemento.innerHTML = `
-        <p class="titulo">${value}</p>`;
-        `<div class="btn-conteiner">
-            <button type="button" class="editar-btn">
-                <i class="fas fa-edit"></i>
-            </button>
-            <div class="btn-conteiner">
-                <button type="button" class="excluirBtn">
-                    <i class="fas fa-lixo"></i>
-            </button>
+        <p class="titulo">${value}</p>
+        <div class="btn-conteiner">
+            <button type="button" class="excluirBtn" onclick="excluir('${id}')" >
+                <i class="fas fa-lixo"></i>
+        </button>
         </div>`;
         lista.appendChild(elemento);
         barraNotificação('foi','sucesso')
@@ -74,9 +70,9 @@ function addItem(e) {
 //barra de notificação
 
 function barraNotificação(text, x) {
-    var alerta = document.querySelector('.alerta'); // Ensure the alerta element is defined
+    var alerta = document.querySelector('.alerta'); 
     if (!alerta) {
-        console.error('Element with id "alerta" not found.');
+        console.error('Elemento com id "alerta" não encontrado.');
         return;
     }
     alerta.innerHTML = text;
@@ -88,19 +84,16 @@ function barraNotificação(text, x) {
     }, 1500);
 }
 
+function excluir(id){
+    const element = document.querySelector(`[data-id="${id}"]`);
+    lista.removeChild(element);
+    barraNotificação('Concluido','sucesso')
+}
+
 function editItem(id) {
     const element = document.querySelector(`[data-id="${id}"]`);
     editElement = element;
     barra.value = element.querySelector('.titulo').textContent;
     editFlag = true;
     editID = id;
-}
-
-function delet(id){
-    const element = document.querySelector(`[data-id="${id}"]`);
-    editElement = element;
-    '' = element.querySelector('.titulo').textContent;
-    editFlag = true;
-    editID = id;
-
 }
