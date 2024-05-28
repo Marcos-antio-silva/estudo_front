@@ -52,6 +52,15 @@ function addItem(e) {
         elemento.setAttributeNode(atr);
         elemento.innerHTML = `
         <p class="titulo">${value}</p>`;
+        `<div class="btn-conteiner">
+            <button type="button" class="editar-btn">
+                <i class="fas fa-edit"></i>
+            </button>
+            <div class="btn-conteiner">
+                <button type="button" class="excluirBtn">
+                    <i class="fas fa-lixo"></i>
+            </button>
+        </div>`;
         lista.appendChild(elemento);
         barraNotificação('foi','sucesso')
         console.log (value, id)
@@ -79,6 +88,19 @@ function barraNotificação(text, x) {
     }, 1500);
 }
 
-function reset(){
- 
+function editItem(id) {
+    const element = document.querySelector(`[data-id="${id}"]`);
+    editElement = element;
+    barra.value = element.querySelector('.titulo').textContent;
+    editFlag = true;
+    editID = id;
+}
+
+function delet(id){
+    const element = document.querySelector(`[data-id="${id}"]`);
+    editElement = element;
+    '' = element.querySelector('.titulo').textContent;
+    editFlag = true;
+    editID = id;
+
 }
