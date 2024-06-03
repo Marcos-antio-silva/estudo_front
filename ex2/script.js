@@ -27,7 +27,7 @@ function carregar (){
 
     } else {
 
-        estilo('url("img/noite.jpg")','#000033','white')
+        estilo('url("img/noite.jpg")','#000033','gray')
 
     }
 }
